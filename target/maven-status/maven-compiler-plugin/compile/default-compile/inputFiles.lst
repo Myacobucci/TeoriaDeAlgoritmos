@@ -1,5 +1,6 @@
-/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/Graph/Node.java
-/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/Graph/Edge.java
-/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/Graph/Notdigraph.java
-/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/Graph/Digraph.java
-/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/Graph/Graph.java
+/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/graph/Edge.java
+/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/graph/Graph.java
+/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/graph/State.java
+/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/graph/Digraph.java
+/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/graph/Node.java
+/home/juanall/Escritorio/FIUBA/TDA/TeoriaDeAlgoritmos/src/main/java/graph/Notdigraph.java

@@ -1,4 +1,4 @@
-import Graph.Node;
+import graph.Node;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.hasSize;

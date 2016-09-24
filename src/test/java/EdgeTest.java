@@ -1,4 +1,4 @@
-import Graph.Edge;
+import graph.Edge;
 import org.junit.Test;
 
 import static org.junit.Assert.assertThat;
