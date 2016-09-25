@@ -1,6 +1,7 @@
-graph/Node.class
-graph/Edge.class
 graph/Notdigraph.class
-graph/Digraph.class
 graph/State.class
 graph/Graph.class
+graph/Node.class
+graph/Predecessor.class
+graph/Edge.class
+graph/Digraph.class

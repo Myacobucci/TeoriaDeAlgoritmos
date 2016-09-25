@@ -8,10 +8,26 @@ import java.util.ArrayList;
 public class Node {
     private ArrayList<Edge> edges;
     private State state;
+    private Predecessor predecessor;
+    private Integer id;
 
-    public Node() {
+    public Node(Integer id) {
+        this.id = id;
         this.edges = new ArrayList<Edge>();
         this.state = State.NOTVISITED;
+
+    }
+
+    public Integer getId() {
+        return this.id;
+    }
+
+    public void setPredecessor(Predecessor predecessor) {
+        this.predecessor = predecessor;
+    }
+
+    public Predecessor getPredecessor() {
+        return this.predecessor;
     }
 
     public ArrayList<Edge> getEdges() {
@@ -26,7 +42,7 @@ public class Node {
         return this.state;
     }
 
-    public void visit() {
+    public void visited() {
         this.state = State.VISITED;
     }
 }

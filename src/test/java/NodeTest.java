@@ -12,7 +12,7 @@ public class NodeTest {
 
     @Test
     public void addAndGetEdgesTest() {
-        Node node = new Node();
+        Node node = new Node(1);
         node.addEdge(5,5);
         assertThat(node.getEdges(),hasSize(1));
         node.addEdge(1,3);
