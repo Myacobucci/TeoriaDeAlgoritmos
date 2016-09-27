@@ -1,5 +1,6 @@
 graph/Notdigraph.class
 graph/State.class
+comparables/Comparable.class
 graph/Graph.class
 graph/Node.class
 graph/Predecessor.class

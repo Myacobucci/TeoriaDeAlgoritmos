@@ -30,7 +30,7 @@ public abstract class Path {
     }
 
     /**
-     * Build the path, between source and target, using BFS information
+     * Build path, between source and target, using BFS information
      * @param target
      */
     protected void distance(Integer target) {
