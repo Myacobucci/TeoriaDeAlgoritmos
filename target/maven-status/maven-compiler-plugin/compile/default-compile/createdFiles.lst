@@ -1,3 +1,4 @@
+comparables/Condition.class
 graph/Notdigraph.class
 graph/State.class
 comparables/Comparable.class
@@ -6,3 +7,5 @@ graph/Node.class
 graph/Predecessor.class
 graph/Edge.class
 graph/Digraph.class
+path/Path.class
+path/BFS.class
