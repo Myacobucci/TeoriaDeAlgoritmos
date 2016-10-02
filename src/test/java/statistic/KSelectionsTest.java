@@ -22,10 +22,10 @@ public class KSelectionsTest {
 
         KSelections ks = new KSelections(list);
 
-        Assert.assertEquals(1, ks.getKSmallest(1));
-        Assert.assertEquals(3, ks.getKSmallest(3));
-        Assert.assertEquals(10, ks.getKSmallest(5));
-        Assert.assertNotEquals(4, ks.getKSmallest(5));
+        Assert.assertEquals(1, ks.getKelement(1));
+        Assert.assertEquals(3, ks.getKelement(3));
+        Assert.assertEquals(10, ks.getKelement(5));
+        Assert.assertNotEquals(4, ks.getKelement(5));
 
     }
 

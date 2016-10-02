@@ -22,10 +22,10 @@ public class BruteForceTest {
 
         BruteForce bf = new BruteForce(list);
 
-        Assert.assertEquals(1, bf.getSmallestK(1));
-        Assert.assertEquals(3, bf.getSmallestK(3));
-        Assert.assertEquals(10, bf.getSmallestK(5));
-        Assert.assertNotEquals(4, bf.getSmallestK(5));
+        Assert.assertEquals(1, bf.getKelement(1));
+        Assert.assertEquals(3, bf.getKelement(3));
+        Assert.assertEquals(10, bf.getKelement(5));
+        Assert.assertNotEquals(4, bf.getKelement(5));
 
     }
 

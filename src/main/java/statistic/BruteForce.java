@@ -29,7 +29,7 @@ public class BruteForce {
     }
 
 
-    public Object getSmallestK(int k){
+    public Object getKelement(int k){
         boolean isKElement;
         Iterator it = list.iterator();
 

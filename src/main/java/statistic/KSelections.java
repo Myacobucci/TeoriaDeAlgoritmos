@@ -15,7 +15,7 @@ public class KSelections {
         this.size = in.size();
     }
 
-    public Comparable getKSmallest(int k){
+    public Comparable getKelement(int k){
         int minPos=0;
         if (k >= this.size) return -1;
 

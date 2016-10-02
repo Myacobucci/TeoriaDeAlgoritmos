@@ -9,7 +9,7 @@ public class Quickselect {
 		this.quickArray = elements;
 	}
 
-	public int getSmallestK(int k){
+	public int getKelement(int k){
 		if (this.quickArray.length < 1){
 			return -1;
 		}
