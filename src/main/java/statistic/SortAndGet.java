@@ -6,14 +6,14 @@ import java.util.Arrays;
 /**
  * Created by juan on 29/09/16.
  */
-public class SortAndGet {
+public class SortAndGet implements IStatistic{
     Integer[] array;
 
     public SortAndGet(Integer[] elements) {
         this.array = elements;
     }
 
-    public int getKelement(Integer index) {
+    public int getKelement(int index) {
         Arrays.sort(array);
         return array[index];
     }

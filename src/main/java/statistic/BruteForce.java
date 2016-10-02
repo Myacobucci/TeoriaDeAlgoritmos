@@ -6,7 +6,7 @@ import java.util.Iterator;
     /**
      * Created by alex on 24/09/16.
      */
-public class BruteForce {
+public class BruteForce implements IStatistic{
 
     protected final ArrayList<Comparable> list = new ArrayList<Comparable>();;
     protected int size;
@@ -29,17 +29,17 @@ public class BruteForce {
     }
 
 
-    public Object getKelement(int k){
+    public int getKelement(int k){
         boolean isKElement;
         Iterator it = list.iterator();
 
         while(it.hasNext()) {
             Comparable elem = (Comparable) it.next();
             if (isKElement(elem,k)){
-                return elem;
+                return (int) elem;
             }
         }
-        return null;
+        return 0;
     }
 
     protected Boolean isKElement(Comparable element, int k) {

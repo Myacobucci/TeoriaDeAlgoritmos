@@ -2,7 +2,7 @@ package statistic;
 
 import java.util.ArrayList;
 
-public class Quickselect {
+public class Quickselect implements IStatistic{
 	Integer[] quickArray;
 
 	public Quickselect(Integer[] elements){

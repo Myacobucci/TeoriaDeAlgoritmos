@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Created by alex on 29/09/16.
  */
-public class KSelections {
+public class KSelections implements IStatistic{
     ArrayList<Comparable> list = new ArrayList();
     int size;
 
@@ -15,7 +15,7 @@ public class KSelections {
         this.size = in.size();
     }
 
-    public Comparable getKelement(int k){
+    public int getKelement(int k){
         int minPos=0;
         if (k >= this.size) return -1;
 
@@ -24,7 +24,7 @@ public class KSelections {
             swap(i,minPos);
         }
 
-        return this.list.get(k);
+        return (int) this.list.get(k);
     }
 
     protected int getMinBetween(int begin, int end){
