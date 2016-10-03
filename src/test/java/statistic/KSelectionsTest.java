@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class KSelectionsTest {
     @Test
-    public void getKSmallest() throws Exception {
+    public void getKSmallestTest() throws Exception {
         ArrayList<Integer> list = new ArrayList<Integer>();
 
         list.add(1);

@@ -8,35 +8,22 @@ import java.util.Iterator;
      */
 public class BruteForce implements IStatistic{
 
-    protected final ArrayList<Comparable> list = new ArrayList<Comparable>();;
+    protected final ArrayList<Integer> list = new ArrayList<Integer>();;
     protected int size;
 
-    public BruteForce(){
-        this.size = 0;
-    }
     public BruteForce(ArrayList source){
+        this.size = 0;
         this.list.addAll(source);
         this.size = list.size();
     }
 
-
-    public void addToList(Comparable e){
-        this.list.add(e);
-    }
-
-    public Comparable getFromList(int pos){
-        return list.get(pos);
-    }
-
-
     public int getKelement(int k){
-        boolean isKElement;
         Iterator it = list.iterator();
 
         while(it.hasNext()) {
-            Comparable elem = (Comparable) it.next();
+            Integer elem = (Integer) it.next();
             if (isKElement(elem,k)){
-                return (int) elem;
+                return elem;
             }
         }
         return 0;

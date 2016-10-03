@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class BruteForceTest {
     @Test
-    public void getSmallestK() throws Exception {
+    public void getSmallestKTest() throws Exception {
         ArrayList<Integer> list = new ArrayList<Integer>();
 
         list.add(1);

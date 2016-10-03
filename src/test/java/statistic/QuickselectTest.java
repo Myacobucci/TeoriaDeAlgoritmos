@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class QuickselectTest {
 	@Test
-    public void getKelement() {
+    public void getKelementTest() {
         Integer[] array = new Integer[6];
         array[0] = 5;
         array[1] = 1;

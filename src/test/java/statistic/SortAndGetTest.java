@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 public class SortAndGetTest {
 
     @Test
-    public void getKelement() {
+    public void getKelementTest() {
         Integer[] array = new Integer[5];
         array[0] = 5;
         array[1] = 1;
