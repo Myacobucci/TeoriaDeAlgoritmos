@@ -1,5 +1,7 @@
 package graph;
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 
 /**
@@ -10,6 +12,9 @@ public class Node {
     private State state;
     private Predecessor predecessor;
     private Integer id;
+    private Integer x;
+    private Integer y;
+
 
     public Node(Integer id) {
         this.id = id;
@@ -44,5 +49,14 @@ public class Node {
 
     public void visited() {
         this.state = State.VISITED;
+    }
+
+    public void setXY(Integer x, Integer y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public Pair<Integer, Integer> getXY(){
+        return new Pair(x,y);
     }
 }
