@@ -20,12 +20,12 @@ public class KSelectionsTest {
         list.add(2);
         list.add(0);
 
-        KSelections ks = new KSelections(list);
+        KSelections ks = new KSelections();
 
-        Assert.assertEquals(1, ks.getKelement(1));
-        Assert.assertEquals(3, ks.getKelement(3));
-        Assert.assertEquals(10, ks.getKelement(5));
-        Assert.assertNotEquals(4, ks.getKelement(5));
+        Assert.assertEquals(1, ks.getKelement(1,list));
+        Assert.assertEquals(3, ks.getKelement(3,list));
+        Assert.assertEquals(10, ks.getKelement(5,list));
+        Assert.assertNotEquals(4, ks.getKelement(5,list));
 
     }
 

@@ -20,12 +20,9 @@ public class BruteForceTest {
         list.add(2);
         list.add(0);
 
-        BruteForce bf = new BruteForce(list);
+        BruteForce bf = new BruteForce();
 
-        Assert.assertEquals(1, bf.getKelement(1));
-        Assert.assertEquals(3, bf.getKelement(3));
-        Assert.assertEquals(10, bf.getKelement(5));
-        Assert.assertNotEquals(4, bf.getKelement(5));
+        Assert.assertEquals(1, bf.getKelement(1,list));
 
     }
 

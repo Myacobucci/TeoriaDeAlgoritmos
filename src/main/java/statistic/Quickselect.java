@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Quickselect implements IStatistic{
 	Integer[] quickArray;
 
-	public Quickselect(Integer[] elements){
-		this.quickArray = elements;
+	public Quickselect(){
 	}
 
-	public int getKelement(int k){
+	public int getKelement(int k, ArrayList<Integer> arrayList){
+        this.quickArray = arrayList.toArray(new Integer[arrayList.size()]);
 		if (this.quickArray.length < 1){
 			return -1;
 		}

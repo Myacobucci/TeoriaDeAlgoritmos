@@ -8,16 +8,16 @@ import java.util.Iterator;
      */
 public class BruteForce implements IStatistic{
 
-    protected final ArrayList<Integer> list = new ArrayList<Integer>();;
+    protected final ArrayList<Integer> list = new ArrayList<Integer>();
     protected int size;
 
-    public BruteForce(ArrayList source){
-        this.size = 0;
-        this.list.addAll(source);
-        this.size = list.size();
+    public BruteForce(){
+
     }
 
-    public int getKelement(int k){
+    public int getKelement(int k, ArrayList arrayList){
+        this.list.addAll(arrayList);
+        this.size = list.size();
         Iterator it = list.iterator();
 
         while(it.hasNext()) {

@@ -10,12 +10,12 @@ public class KSelections implements IStatistic{
     int size;
 
 
-    public KSelections(ArrayList in){
-        this.list.addAll(in);
-        this.size = in.size();
+    public KSelections(){
     }
 
-    public int getKelement(int k){
+    public int getKelement(int k, ArrayList arrayList){
+        this.list.addAll(arrayList);
+        this.size = arrayList.size();
         int minPos=0;
         if (k >= this.size) return -1;
 

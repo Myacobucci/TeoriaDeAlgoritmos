@@ -4,6 +4,8 @@ import org.junit.Test;
 import org.omg.PortableInterceptor.Interceptor;
 
 
+import java.util.ArrayList;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
@@ -15,13 +17,13 @@ public class SortAndGetTest {
 
     @Test
     public void getKelementTest() {
-        Integer[] array = new Integer[5];
-        array[0] = 5;
-        array[1] = 1;
-        array[2] = 100;
-        array[3] = 3;
-        array[4] = 0;
-        SortAndGet sortAndGet = new SortAndGet(array);
-        assertThat(sortAndGet.getKelement(2), equalTo(3));
+        ArrayList arrayList = new ArrayList();
+        arrayList.add(5);
+        arrayList.add(1);
+        arrayList.add(100);
+        arrayList.add(3);
+        arrayList.add(0);
+        SortAndGet sortAndGet = new SortAndGet();
+        assertThat(sortAndGet.getKelement(2,arrayList), equalTo(3));
     }
 }
