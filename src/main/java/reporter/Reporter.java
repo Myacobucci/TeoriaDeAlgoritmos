@@ -35,12 +35,17 @@ public class Reporter {
 
         for (IStatistic statistic : statistics) {
             Instant start = Instant.now();
-            //long startTime = System.nanoTime();
-            statistic.getKelement(10,arrayList);
+            statistic.getKelement(50,arrayList);
             Instant finish = Instant.now();
-            //long stopTime = System.nanoTime();
-            //long elapsedTime = stopTime - startTime;
-            information.put(statistic.getClass().getName(), Duration.between(start,finish).toString());
+            information.put(statistic.getClass().getName() + " Random", Duration.between(start,finish).toString());
+            start = Instant.now();
+            statistic.getKelement(50,sortArrayList);
+            finish = Instant.now();
+            information.put(statistic.getClass().getName() + " Sort", Duration.between(start,finish).toString());
+            start = Instant.now();
+            statistic.getKelement(50,invertedSortArrayList);
+            finish = Instant.now();
+            information.put(statistic.getClass().getName() + " Inverted Sort", Duration.between(start,finish).toString());
         }
 
         for (Map.Entry entry : information.entrySet()) {

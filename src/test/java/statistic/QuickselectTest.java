@@ -10,6 +10,10 @@ public class QuickselectTest {
 	@Test
     public void getKelementTest() {
         ArrayList array = new ArrayList();
+        ArrayList array2 = new ArrayList();
+        array2.add(5);
+        array2.add(7);
+        array2.add(0);
         array.add(5);
         array.add(1);
         array.add(100);
@@ -23,5 +27,6 @@ public class QuickselectTest {
         assertThat(quickselect.getKelement(3,array), equalTo(5));
         assertThat(quickselect.getKelement(4,array), equalTo(7));
         assertThat(quickselect.getKelement(5,array), equalTo(100));
+        assertThat(quickselect.getKelement(0,array2), equalTo(0));
     }
 }
