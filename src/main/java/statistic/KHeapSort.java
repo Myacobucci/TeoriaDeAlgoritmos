@@ -3,7 +3,7 @@ package statistic;
 import java.util.ArrayList;
 
 
-public class KHeapSort {
+public class KHeapSort implements IStatistic {
 
 
     private int n;
@@ -11,14 +11,16 @@ public class KHeapSort {
     private int right;
     private int largest;
     protected int size;
-    public ArrayList<Comparable> a = new ArrayList<Comparable>();
+    public ArrayList<Integer> a = new ArrayList<Integer>();
 
     public KHeapSort(ArrayList source){
         this.a.addAll(source);
         this.size = a.size();
     }
+    public KHeapSort(){
+    }
 
-    public Object getSmallestK(int k){
+    public Integer getSmallestK(int k){
         int counter = 0;
         buildHeap();
         for(int i=n;i>0;i--){
@@ -40,7 +42,7 @@ public class KHeapSort {
         }
     }
 
-    public  void maxHeap(ArrayList<Comparable> a, int i){
+    public  void maxHeap(ArrayList<Integer> a, int i){
         left=2*i;
         right=2*i+1;
         if(left <= n && a.get(left).compareTo(a.get(i)) < 0){
@@ -59,13 +61,19 @@ public class KHeapSort {
     }
 
     public void exchange(int i, int j){
-        Comparable b = a.get(i);
-        Comparable c = a.get(j);
+        Integer b = a.get(i);
+        Integer c = a.get(j);
         a.set(i,c);
         a.set(j,b);
 
     }
 
 
+    @Override
+    public int getKelement(int k, ArrayList<Integer> arrayList) {
+        this.a = arrayList;
+        this.size = a.size();
+        return getSmallestK(k);
 
+    }
 }
