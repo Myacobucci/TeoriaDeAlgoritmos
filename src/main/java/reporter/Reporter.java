@@ -32,20 +32,51 @@ public class Reporter {
     }
 
     public void generateReport() {
-
+        Integer k = 0;
         for (IStatistic statistic : statistics) {
             Instant start = Instant.now();
-            statistic.getKelement(50,arrayList);
+            statistic.getKelement(k,arrayList);
             Instant finish = Instant.now();
-            information.put(statistic.getClass().getName() + " Random", Duration.between(start,finish).toString());
+            information.put(statistic.getClass().getName() + "/Random/k = " + k, Duration.between(start,finish).toString());
             start = Instant.now();
-            statistic.getKelement(50,sortArrayList);
+            statistic.getKelement(k,sortArrayList);
             finish = Instant.now();
-            information.put(statistic.getClass().getName() + " Sort", Duration.between(start,finish).toString());
+            information.put(statistic.getClass().getName() + "/Sort/k = " + k, Duration.between(start,finish).toString());
             start = Instant.now();
-            statistic.getKelement(50,invertedSortArrayList);
+            statistic.getKelement(k,invertedSortArrayList);
             finish = Instant.now();
-            information.put(statistic.getClass().getName() + " Inverted Sort", Duration.between(start,finish).toString());
+            information.put(statistic.getClass().getName() + "/Inverted Sort/k = " + k, Duration.between(start,finish).toString());
+        }
+        k = arrayList.size() - 1;
+        for (IStatistic statistic : statistics) {
+            Instant start = Instant.now();
+            statistic.getKelement(k,arrayList);
+            Instant finish = Instant.now();
+            information.put(statistic.getClass().getName() + "/Random/k = " + k, Duration.between(start,finish).toString());
+            start = Instant.now();
+            statistic.getKelement(k,sortArrayList);
+            finish = Instant.now();
+            information.put(statistic.getClass().getName() + "/Sort/k = " + k, Duration.between(start,finish).toString());
+            start = Instant.now();
+            statistic.getKelement(k,invertedSortArrayList);
+            finish = Instant.now();
+            information.put(statistic.getClass().getName() + "/Inverted Sort/k = " + k, Duration.between(start,finish).toString());
+        }
+
+        k = arrayList.size() / 2;
+        for (IStatistic statistic : statistics) {
+            Instant start = Instant.now();
+            statistic.getKelement(k,arrayList);
+            Instant finish = Instant.now();
+            information.put(statistic.getClass().getName() + "/Random/k = " + k, Duration.between(start,finish).toString());
+            start = Instant.now();
+            statistic.getKelement(k,sortArrayList);
+            finish = Instant.now();
+            information.put(statistic.getClass().getName() + "/Sort/k = " + k, Duration.between(start,finish).toString());
+            start = Instant.now();
+            statistic.getKelement(k,invertedSortArrayList);
+            finish = Instant.now();
+            information.put(statistic.getClass().getName() + "/Inverted Sort/k = " + k, Duration.between(start,finish).toString());
         }
 
         for (Map.Entry entry : information.entrySet()) {

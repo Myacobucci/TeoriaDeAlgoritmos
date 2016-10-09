@@ -25,7 +25,7 @@ public class ReporterTest {
 
     @Test
     public void reporterTest() {
-        Reporter reporter = new Reporter(150000,statistics);
+        Reporter reporter = new Reporter(7500,statistics);
         reporter.generateReport();
     }
 }
