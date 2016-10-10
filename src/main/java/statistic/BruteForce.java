@@ -29,20 +29,19 @@ public class BruteForce implements IStatistic{
         return 0;
     }
 
-    protected Boolean isKElement(Comparable element, int k) {
-        Iterator it = list.iterator();
+    protected Boolean isKElement(Integer element, int k) {
+        Iterator<Integer> it = list.iterator();
         int kPosition = 0;
+        Integer actual;
 
         while (it.hasNext()) {
-            Comparable actual = (Comparable) it.next();
+            actual = it.next();
             if (actual.compareTo(element) < 0) {
                 kPosition++;
             }
         }
 
-        if (kPosition == k)
-            return true;
-        return false;
+        return (kPosition == k);
     }
 }
 

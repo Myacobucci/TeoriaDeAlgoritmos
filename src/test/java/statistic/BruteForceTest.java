@@ -23,6 +23,7 @@ public class BruteForceTest {
         BruteForce bf = new BruteForce();
 
         Assert.assertEquals(1, bf.getKelement(1,list));
+        Assert.assertEquals(10, bf.getKelement(5,list));
 
     }
 
