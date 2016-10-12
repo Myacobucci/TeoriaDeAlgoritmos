@@ -18,6 +18,10 @@ public class BFS extends Path {
         queue.add(node);
         while (!queue.isEmpty()) {
             node = queue.remove();
+            if (node.getId().equals(target)) {
+                this.distance(target);
+                return;
+            }
             for (Edge edge : node.getEdges()) {
                 Node currentNode = digraph.getNode(edge.getTargetNode());
                 if (currentNode.getState() == State.NOTVISITED) {
@@ -28,7 +32,6 @@ public class BFS extends Path {
                 }
             }
         }
-        this.distance(target);
     }
 
 }
