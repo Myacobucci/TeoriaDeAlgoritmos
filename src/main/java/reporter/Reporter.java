@@ -19,11 +19,13 @@ public class Reporter {
     private final HashMap<String,ArrayList<String>> information = new HashMap<>();
     private Integer totalPoints;
     private Integer initialSize;
+    private final ArrayList<Integer> vectorSizes = new ArrayList<>();
 
     public Reporter(Integer totalPoints, ArrayList<IStatistic> statistics) {
         this.totalPoints = totalPoints;
         this.statistics = statistics;
         this.initialSize = 8;
+        vectorSizes.add(initialSize);
     }
 
     private void generateRandomArray(Integer size) {
@@ -56,8 +58,13 @@ public class Reporter {
             generateRandomArray(this.initialSize);
             generateReport();
             this.initialSize = this.initialSize * 2;
+            vectorSizes.add(initialSize);
         }
         return this.information;
+    }
+
+    public ArrayList<Integer> getVectorSizes() {
+        return this.vectorSizes;
     }
 
 }

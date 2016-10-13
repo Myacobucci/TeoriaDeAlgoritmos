@@ -33,6 +33,9 @@ public class ReporterTest {
         Reporter reporter = new Reporter(10,this.statistics);
         HashMap<String,ArrayList<String>> information = reporter.getTotalInformation();
 
+        System.out.println("Vector sizes");
+        System.out.println(reporter.getVectorSizes());
+        System.out.println("Time per algorithm");
         for (Map.Entry entry : information.entrySet()) {
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
