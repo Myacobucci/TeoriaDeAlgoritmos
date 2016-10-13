@@ -5,6 +5,8 @@ import org.junit.Test;
 import reporter.Reporter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by juan on 09/10/16.
@@ -26,7 +28,14 @@ public class ReporterTest {
 
     @Test
     public void reporterTest() {
-        Reporter reporter = new Reporter(7500,statistics);
-        reporter.generateReport();
+        // Genera 10 puntos , para los graficos, cambiando el entero , se agregan o quitan puntos, con esto hacemos el grafico
+        // mide el tiempo, en un vector random de 8 , 16, 32 .... , con k = n/2 , lo que imprime , son los tiempos en nanosecons
+        Reporter reporter = new Reporter(10,this.statistics);
+        HashMap<String,ArrayList<String>> information = reporter.getTotalInformation();
+
+        for (Map.Entry entry : information.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
     }
 }
