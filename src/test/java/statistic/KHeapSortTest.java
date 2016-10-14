@@ -23,14 +23,14 @@ public class KHeapSortTest {
         list.add(2);
         list.add(0);
 
-        KHeapSort hs = new KHeapSort(list);
-        Assert.assertEquals(1, hs.getSmallestK(1));
-        hs = new KHeapSort(list);
-        Assert.assertEquals(3, hs.getSmallestK(3));
-        hs = new KHeapSort(list);
-        Assert.assertEquals(10, hs.getSmallestK(5));
-        hs = new KHeapSort(list);
-        Assert.assertNotEquals(4, hs.getSmallestK(5));
+        KHeapSort hs = new KHeapSort();
+        Assert.assertEquals(1, hs.getKelement(1,list));
+        hs = new KHeapSort();
+        Assert.assertEquals(3, hs.getKelement(3, list));
+        hs = new KHeapSort();
+        Assert.assertEquals(10, hs.getKelement(5,list));
+        hs = new KHeapSort();
+        Assert.assertNotEquals(4, hs.getKelement(5, list));
 
     }
 
