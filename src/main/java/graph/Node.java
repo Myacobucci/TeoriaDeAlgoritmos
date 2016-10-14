@@ -14,6 +14,11 @@ public class Node {
     private Integer id;
     private Integer x;
     private Integer y;
+    public  Integer g = -1;
+    public  Integer possibleG;
+    public double f;
+    public Node parent = null;
+    public Node possibleParent;
 
 
     public Node(Integer id) {
@@ -58,5 +63,27 @@ public class Node {
 
     public Pair<Integer, Integer> getXY(){
         return new Pair(x,y);
+    }
+
+    public ArrayList<Node> getNeighbors(Digraph digraph) {
+        ArrayList<Node> neighbors = new ArrayList<>();
+        for(Edge edge : edges){
+            Node neighbor = digraph.getNode(edge.getTargetNode());
+            neighbors.add(neighbor);
+            neighbor.possibleG = this.g + edge.getWeight();
+            neighbor.possibleParent = this;
+        }
+        return neighbors;
+    }
+
+    public Integer getWeightTo(Node node, Digraph digraph) {
+        for(Edge edge : edges){
+            Node neighbor = digraph.getNode(edge.getTargetNode());
+            if(node.equals(neighbor)) {
+                return edge.getWeight();
+            }
+
+        }
+        return 100000; //error
     }
 }
