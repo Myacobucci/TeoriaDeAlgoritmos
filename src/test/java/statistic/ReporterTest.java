@@ -23,6 +23,7 @@ public class ReporterTest {
         statistics.add(new Quickselect());
         statistics.add(new KSelections());
         statistics.add(new HeapSelect());
+        statistics.add(new KHeapSort());
 
     }
 
