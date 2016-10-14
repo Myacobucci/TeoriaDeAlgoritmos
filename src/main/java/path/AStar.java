@@ -9,10 +9,7 @@ import java.util.*;
  * Created by devalais on 10/10/16.
  */
 public class AStar extends Path {
-    /*
-    http://mat.uab.cat/~alseda/MasterOpt/AStar-Algorithm.pdf
-    http://www.growingwiththeweb.com/2012/06/a-pathfinding-algorithm.html
-    */
+
 
     private ArrayList<Node> open;
     private ArrayList<Node> close;
