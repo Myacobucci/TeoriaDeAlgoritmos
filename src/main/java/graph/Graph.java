@@ -2,6 +2,7 @@ package graph;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  * Created by juanall on 24/09/16.
@@ -24,6 +25,10 @@ public abstract class Graph {
     }
 
     public Integer getTotalNodes() {return this.totalNodes; }
+
+    public Set<Integer> getNodes() {
+        return this.nodes.keySet();
+    }
 
 
     public ArrayList<Edge> adj_e(Integer source){
